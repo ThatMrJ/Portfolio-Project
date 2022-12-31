@@ -2,25 +2,34 @@
     font-family: 'Roboto', sans-serif;
     justify-self: center;
     line-height: 1.5;
+    color: white;
 }
 
 html {
     width: auto;
     padding-left: 400px;
     padding-right: 400px;
-
+    background-color: black;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px black solid;
-    height: 50px;
+    border-bottom: 1px white solid;
+    height: 80px;
+    padding-bottom: 10px;
 }
 
+h1 {
+    font-size: 32px;
+
+}
+h1:hover {
+    cursor: pointer;
+}
 nav li {
     display: inline-flex;
-    padding: 10px 0px 15px 15px;
+    padding: 20px 0px 25px 25px;
 }
 
 header {
@@ -49,7 +58,7 @@ footer {
     text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     * {
         text-align: left;
     }

@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav>
-        <h1>Sililo Siaosi</h1>
+        <h1 id="name">Sililo Siaosi</h1>
         <ul>
             <li>About</li>
             <li>Skills</li>
@@ -32,10 +32,13 @@
             provider Learning People, who alongside CodeCademy helped me to learn the 
             basics of web development and the languages that were included such as 
             HTML, CSS, JavaScript and supporting programs like Git.</p>
+        <p>I have been coding for <span id="time-container">0</span> seconds</p>
+
+        <p>I have a "creator" tag that I like to use if you hold click my name you'll see it!</p>
     </header>
 
     <main>
-        <h2>Experience</h2>
+        <h2 id="experience">Experience</h2>
         <ul class="languages">
             <li>HTML</li>
             <li>CSS</li>
@@ -47,11 +50,35 @@
 
     <section>
         <h2>Projects</h2>
+        <div class="quote">
+            <p>Motivational Quote</p>
+        </div>
     </section>
-    
-    <footer>
-        <h2>Contact</h2>
-        <p>Email: MyPersonalEmail@gmail.com <br> Number: (64+) 123 456 7890</p>
-    </footer>
 </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const beginning = "9-17-2022";
+    const dateOfBeginning = new Date(beginning);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const today = new Date();
+      const difference = Math.floor(
+        (today.getTime() - dateOfBeginning.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+    
+    const myName = document.getElementById("name")
+    const nameReturn = document.getElementById("name")
+    myName.addEventListener("mousedown",
+     () => {
+        myName.innerHTML = "That Mr J"
+     })
+    myName.addEventListener("mouseup",
+     () => {
+        myName.innerHTML = "Sililo Siaosi"
+     })    
+  </script>
 </html>
