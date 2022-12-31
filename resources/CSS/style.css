@@ -24,8 +24,13 @@ h1 {
     font-size: 32px;
 
 }
-h1:hover {
+#name:hover {
     cursor: pointer;
+}
+
+a:hover {
+    color: rgb(30, 135, 170);
+    text-decoration-color: rgb(30, 135, 170);
 }
 nav li {
     display: inline-flex;
@@ -53,6 +58,14 @@ main li {
 
 section {
     text-align: center;
+}
+section ul {
+    padding-left: 0px;
+}
+section li {
+    display: inline-block;
+    text-align: center;
+    padding: 0px 0px 15px 15px;
 }
 footer {
     text-align: center;

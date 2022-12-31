@@ -14,7 +14,7 @@
         <ul>
             <li>About</li>
             <li>Skills</li>
-            <li>Contact</li>
+            <a href="./contact.html"><li>Contact</li></a>
         </ul>
     </nav>
 
@@ -34,7 +34,7 @@
             HTML, CSS, JavaScript and supporting programs like Git.</p>
         <p>I have been coding for <span id="time-container">0</span> seconds</p>
 
-        <p>I have a "creator" tag that I like to use if you hold click my name you'll see it!</p>
+        <p aria-hidden="true">I have a "creator" tag that I like to use if you hold click my name you'll see it!</p>
     </header>
 
     <main>
@@ -48,11 +48,13 @@
         </ul>
     </main>
 
-    <section>
+    <section id="projects">
         <h2>Projects</h2>
-        <div class="quote">
-            <p>Motivational Quote</p>
-        </div>
+        <ul class="links">
+            <li><a href="https://github.com/ThatMrJ/Quote-Generator" target="_blank" aria-label="quote generator">Motivational Quote Generator</a></li>
+            <li><a href="https://github.com/ThatMrJ/Specimen" target="_blank" aria-label="Specimen Factory">Specimen Factory</a></li>
+            <li><a href="https://github.com/ThatMrJ/CardChecker.js" target="_blank">Debit Card Checker</a></li>
+        </ul>
     </section>
 </body>
   <script>
@@ -71,7 +73,6 @@
     }, 1000);
     
     const myName = document.getElementById("name")
-    const nameReturn = document.getElementById("name")
     myName.addEventListener("mousedown",
      () => {
         myName.innerHTML = "That Mr J"
